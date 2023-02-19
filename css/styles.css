@@ -135,13 +135,21 @@ button {
 
 /* ------------------header-sectoin---------------*/
 
-.logo {
-  margin-right: 76px;
-  font-size: 18px;
-  font-family: var(--secondary-font);
-  line-height: calc(24 / 18);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+@media screen and (min-width: 380px) {
+  .logo {
+    margin-right: 76px;
+    font-size: 18px;
+    font-family: var(--secondary-font);
+    line-height: calc(24 / 18);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .logo {
+    margin-right: 120px;
+  }
 }
 
 .logo-item {
@@ -158,6 +166,13 @@ button {
 
   .contact-list-item {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-list-container {
+    display: block;
+    margin-left: auto;
   }
 }
 
@@ -200,6 +215,11 @@ button {
   transition: color var(--transition-dur-and-funk);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-list-link {
+    padding: 0px;
+  }
+}
 .nav-list-link:hover,
 .nav-list-link:focus,
 .contact-list-link:hover,
@@ -229,11 +249,13 @@ button {
   align-items: center;
 }
 
-.contact-list-container {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  margin-left: auto;
+@media screen and (min-width: 1200px) {
+  .contact-list-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-left: auto;
+  }
 }
 
 .menu-toggle-icon {
@@ -243,6 +265,7 @@ button {
 /*--------------mobile menu--------------*/
 
 .menu-toggle {
+  margin-left: auto;
   background-color: var(--primary-background);
 }
 
@@ -250,17 +273,17 @@ button {
   position: absolute;
   top: 40px;
   right: 40px;
-  height: 24px;
-  width: 24px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
   margin: 0;
   padding: 0;
-  cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--accent);
+  cursor: pointer;
   transition: background-color var(--transition-dur-and-funk);
 }
 
@@ -271,18 +294,18 @@ button {
 }
 
 .menu-container {
-  display: flex;
-  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   padding: 80px 40px 40px;
   background-color: var(--primary-background);
-  z-index: 999;
-  transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+  transform: translateX(100%);
 }
 
 .menu-container.is-open {
@@ -300,12 +323,12 @@ button {
 }
 
 .mobile-menu-link {
+  color: var(--dark);
   font-weight: 700;
   font-size: 36px;
   line-height: calc(40 / 36);
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: var(--dark);
 }
 .mob-current {
   color: var(--pressed-state);
@@ -470,8 +493,8 @@ button {
   font-weight: 700;
   font-size: 36px;
   line-height: calc(40 / 36);
-  text-align: center;
   letter-spacing: 0.02em;
+  text-align: center;
   text-transform: capitalize;
 }
 
@@ -490,8 +513,8 @@ button {
 }
 
 .advantages-text {
-  font-weight: 500;
   color: var(--text);
+  font-weight: 500;
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
 }
@@ -532,16 +555,16 @@ button {
 @media screen and (max-width: 767px) {
   .team-list {
     display: flex;
-    justify-content: center;
     gap: 72px;
+    justify-content: center;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list {
     display: flex;
-    justify-content: center;
     row-gap: 64px;
+    justify-content: center;
     column-gap: var(--indent);
   }
 }
@@ -623,10 +646,10 @@ button {
   .customers-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 16px;
     row-gap: 72px;
     justify-content: center;
     align-items: center;
+    column-gap: 16px;
   }
 }
 
@@ -634,10 +657,10 @@ button {
   .customers-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
     row-gap: 72px;
     justify-content: center;
     align-items: center;
+    column-gap: 24px;
   }
 }
 
@@ -861,9 +884,9 @@ button {
 
 .subs-btn {
   display: flex;
+  gap: 16px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   padding: 8px 24px;
   background-color: var(--primary-brand);
   color: #ffffff;
@@ -975,10 +998,10 @@ button {
 .modal-form {
   display: flex;
   flex-direction: column;
+  gap: 8px;
   width: 100%;
   min-height: 336px;
   margin: 0 auto 16px;
-  gap: 8px;
 }
 
 .modal-form-input-desc {
