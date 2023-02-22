@@ -138,7 +138,7 @@ button {
   overflow: hidden;
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 320px) {
   .logo {
     margin-right: 76px;
     font-size: 18px;
@@ -370,6 +370,12 @@ button {
   gap: 56px;
 }
 
+@media screen and (max-width: 427px) {
+  .mob-soc-list {
+    gap: 32px;
+  }
+}
+
 .mob-soc-link {
   display: flex;
   justify-content: center;
@@ -390,7 +396,7 @@ button {
 
 .hero {
   max-width: 428px;
-  height: 432px;
+  height: auto;
   margin: 0 auto;
   padding: 112px 0;
   background-color: var(--dark);
@@ -442,7 +448,7 @@ button {
 }
 
 .main-title {
-  width: 319px;
+  max-width: 320px;
   margin: 0 auto 72px;
   color: var(--primary-background);
   font-weight: 700;
@@ -455,8 +461,9 @@ button {
 
 @media screen and (min-width: 768px) {
   .main-title {
-    width: 496px;
+    max-width: 496px;
     margin: 0 auto 40px;
+    color: var(--primary-background);
     font-size: 56px;
     line-height: calc(56 / 60);
     letter-spacing: 0.02em;
@@ -489,7 +496,6 @@ button {
 
 /* ---------------------advantages------------------------ */
 
-/* mob */
 @media screen and (max-width: 767px) {
   .advantages-list {
     display: flex;
@@ -497,7 +503,7 @@ button {
     gap: 72px;
   }
 }
-/* tab */
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .advantages-list {
     display: flex;
@@ -507,7 +513,6 @@ button {
   }
 }
 
-/* desktop */
 @media screen and (min-width: 1200px) {
   .advantages-list {
     display: flex;
@@ -520,7 +525,7 @@ button {
     width: 356px;
   }
 }
-/* desktop */
+
 @media screen and (min-width: 1200px) {
   .advantages-item {
     width: auto;
@@ -677,16 +682,8 @@ button {
 
 /*--------------------customers--------------------- */
 
-@media screen and (max-width: 767px) {
-  .customers-section {
-    padding: 96px 0px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .customers-section {
-    padding: 96px 108px;
-  }
+.customers-section {
+  padding: 96px 0px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -921,6 +918,7 @@ button {
 @media screen and (min-width: 1200px) {
   .footer-thumb {
     margin: 0px;
+    gap: 120px;
   }
 }
 
@@ -934,6 +932,12 @@ button {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    text-align: left;
+  }
 }
 
 .footer-logo-syllable-secondary {
@@ -1017,6 +1021,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .subs-footer-wrapper {
+    margin-left: auto;
+  }
+}
+
 .subs-btn {
   display: flex;
   gap: 16px;
@@ -1049,7 +1059,7 @@ button {
 }
 
 .subs-footer-input {
-  width: 396px;
+  width: 100%;
   height: 40px;
   margin: 0px auto;
   padding-left: 16px;
@@ -1101,14 +1111,23 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 408px;
-  height: 584px;
   padding: 72px 24px 24px 24px;
   border-radius: var(--bor-rad);
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%);
+  width: 95%;
+  max-width: 392px;
+  height: 95%;
+  max-height: 586px;
+  overflow: scroll;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    max-width: 408px;
+  }
 }
 
 .modal-close-btn {
