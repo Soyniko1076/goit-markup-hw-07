@@ -976,6 +976,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .media-title {
+    margin-left: 0px;
+  }
+}
+
 .media-title-item {
   margin-left: 0px;
 }
