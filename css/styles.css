@@ -55,6 +55,7 @@ ol {
   padding: 0;
 }
 
+/* responsive image */
 img {
   display: block;
   /* max-width: 100%; */
@@ -826,6 +827,12 @@ button {
 @media screen and (min-width: 768px) {
   .examples-list {
     --items: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .examples-list {
+    --items: 3;
   }
 }
 
