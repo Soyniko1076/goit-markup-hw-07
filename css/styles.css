@@ -807,11 +807,6 @@ button {
   }
 }
 
-/* .filter-section {
-  margin-top: 96px;
-  margin-bottom: 120px;
-} */
-
 .filter-list {
   display: flex;
   flex-wrap: wrap;
@@ -867,11 +862,6 @@ button {
   font-weight: 500;
   font-size: 20px;
   line-height: calc(24 / 20);
-}
-
-.examples-inner {
-  outline: 2px dashed green;
-  outline-offset: -2px;
 }
 
 .examples-item {
